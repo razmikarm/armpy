@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, fields, asdict
 from abc import ABC, abstractmethod
 
 
@@ -14,7 +14,9 @@ class Blocks:
     def_block: Statement
     # with_block: Statement
 
-    @property
     @classmethod
-    def fields(cls):
+    def get_fields(cls):
         return fields(cls)
+
+    def items(self):
+        return asdict(self).items()

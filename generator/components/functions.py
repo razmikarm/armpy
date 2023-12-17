@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from dataclasses import dataclass, fields
+from dataclasses import dataclass, fields, asdict
 
 @dataclass
 class Functions:
@@ -18,7 +18,9 @@ class Functions:
     sum: str
     round: str
 
-    @property
     @classmethod
-    def fields(cls):
+    def get_fields(cls):
         return fields(cls)
+
+    def items(self):
+        return asdict(self).items()
