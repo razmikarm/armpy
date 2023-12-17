@@ -1,5 +1,6 @@
 from .translator import Translator
 
+
 class Generator:
 
     def __init__(self, content, dictionary=None):

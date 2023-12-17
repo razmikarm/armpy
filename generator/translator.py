@@ -1,4 +1,7 @@
-from generator.components import *
+import json
+
+from generator.components import Functions, Blocks
+
 
 class Translator:
     
@@ -8,11 +11,20 @@ class Translator:
 
     def translate(self, raw_data):
         pass
-    
+
     def _update_dict(self, dictionary):
         if dictionary is None:
-            self.dict_data = self.load_json(dictionary)
+            dictionary = 'dictionary.json'
+        self._load_json(dictionary)
 
-    @classmethod
-    def load_json(cls, dictionary):
-        ...
+    def _load_functions(self, functions_data):
+        pass
+
+    def _load_blocks(self, blocks_data):
+        pass
+
+    def _load_json(self, dictionary):
+        with open(dictionary) as dict_file:
+            json_data = json.load(dict_file)
+        self._load_functions(json_data["functions"])
+        self._load_blocks(json_data["blocks"])
