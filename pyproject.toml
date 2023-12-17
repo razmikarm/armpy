@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "armpy"
+version = "0.1.0"
+description = "Python in Armenian"
+authors = ["Razmik Poghosyan <razmikarm@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
