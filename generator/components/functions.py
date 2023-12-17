@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from dataclasses import dataclass
+from dataclasses import dataclass, fields
 
 @dataclass
 class Functions:
@@ -17,3 +17,8 @@ class Functions:
     min: str
     sum: str
     round: str
+
+    @property
+    @classmethod
+    def fields(cls):
+        return fields(cls)

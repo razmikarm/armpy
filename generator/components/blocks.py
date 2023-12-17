@@ -8,7 +8,13 @@ class Statement(ABC):
 
 @dataclass
 class Blocks:
-    for_block: Statement
     if_block: Statement
+    while_block: Statement
+    for_block: Statement
     def_block: Statement
     # with_block: Statement
+
+    @property
+    @classmethod
+    def fields(cls):
+        return fields(cls)
