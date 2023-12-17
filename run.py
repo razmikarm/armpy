@@ -22,7 +22,7 @@ else:
 with open(in_file_name) as in_file:
     gen = Generator(in_file.read())
     gen.generate()
-    code_content = gen.result
+    code_content = gen.code
 
 if has_generate_flag:
     with open(f'translated_{in_file_name}', 'w') as out_file:

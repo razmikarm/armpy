@@ -1,12 +1,15 @@
+from .translator import Translator
+
 class Generator:
-    
-    def __init__(self, content):
+
+    def __init__(self, content, dictionary=None):
         self.raw_data = content
-        self.__result = None
-        
+        self.__code = None
+        self.translator = Translator(dictionary)
+
     @property
-    def result(self):
-        return self.__result
+    def code(self):
+        return self.__code
 
     def generate(self):
-        self.__result = self.raw_data
+        self.__code = self.translator.translate(self.raw_data)
