@@ -1,7 +1,13 @@
 {
     "functions": {
         "input": "մուտքագրել",
-        "print": "տպել",
+        "print": {
+            "name": "տպել",
+            "args": {
+                "sep": "բաժանիչ",
+                "end": "վերջ"
+            }
+        },
         "int": "ամբողջ",
         "str": "տող",
         "float": "կետով",
@@ -29,9 +35,9 @@
             "format":"ֆորմատավորել",
             "format_map":"",
             "index":"ինդեքս",
-            "isalnum":"թվատառ_է",
-            "isalpha":"տառեր_են",
-            "isascii":"ասքիի",
+            "isalnum":"տառաթիվ_է",
+            "isalpha":"տառ_է",
+            "isascii":"",
             "isdecimal":"տասնորդական_է",
             "isdigit":"թվանշան_է",
             "isidentifier":"",
@@ -46,7 +52,7 @@
             "lower":"փոքրատառ",
             "lstrip":"ձախից_պոկել",
             "maketrans":"",
-            "partition":"բաժանել",
+            "partition":"մասնատել",
             "removeprefix":"ջնջել_նախաբանը",
             "removesuffix":"ջնջել_վերջաբանը",
             "replace":"փոխարինել",
